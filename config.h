@@ -204,9 +204,6 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,             XK_plus,        zoom,            {.f = +1} },
 	{ TERMMOD,             XK_minus,       zoom,            {.f = -1} },
 	{ TERMMOD,             XK_equal,       zoomreset,       {.f =  0} },
-//	{ TERMMOD,             XK_C,           clipcopy,        {.i =  0} },
-//	{ TERMMOD,             XK_V,           clippaste,       {.i =  0} },
-//	{ TERMMOD,             XK_Y,           selpaste,        {.i =  0} },
 	{ ShiftMask,           XK_Insert,      selpaste,        {.i =  0} },
 	{ TERMMOD,             XK_Num_Lock,    numlock,         {.i =  0} },
 	{ TERMMOD,             XK_Escape,      keyboard_select, {.i =  0} },
@@ -483,3 +480,10 @@ static char ascii_printable[] =
 	" !\"#$%&'()*+,-./0123456789:;<=>?"
 	"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
 	"`abcdefghijklmnopqrstuvwxyz{|}~";
+
+/*
+ * plumb_cmd is run on mouse button 3 click, with first NULL set to
+ * current selection and with cwd set to the cwd of the active shell
+ * NOTE: As a modification, the command stdout is sent to the terminal
+ */
+static char *plumb_cmd[] = {"plumb", "-m", NULL, NULL};
