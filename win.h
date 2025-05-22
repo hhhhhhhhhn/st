@@ -41,3 +41,6 @@ int xstartdraw(void);
 void toggle_winmode(int);
 void keyboard_select(const Arg *);
 void xximspot(int, int);
+
+void xstartimagedraw(int *dirty, int rows);
+void xfinishimagedraw();
