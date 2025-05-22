@@ -11,7 +11,7 @@ static char *font2[] = {
 	"Noto Color Emoji:style=regular:pixelsize=18:antialias=true:autohint=true",
 };
 
-static int borderpx = 2;
+static int borderpx = 4;
 
 /* How to align the content in the window when the size of the terminal
  * doesn't perfectly match the size of the window. The values are percentages.
